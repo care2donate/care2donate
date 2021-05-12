@@ -2,7 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+venv
+.idea
+care2donate/config/config.py
 # C extensions
 *.so
 
