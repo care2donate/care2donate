@@ -1,8 +1,9 @@
-# care2donate
-https://care2donate.com/
+# Care2Donate
 
+<https://care2donate.com/>
 
-# Setup
+## Setup
+
 * sudo apt-get install libpq-dev python-dev
 * sudo apt-get install python-virtualenv
 * sudo apt-get install postgresql postgresql-contrib
@@ -15,3 +16,8 @@ https://care2donate.com/
 * create database and user and change the values as required in care2donate/config/config.py
 * ./manage.py migrate
 * ./manage.py runserver
+
+## Postgres
+
+For MacOS:
+    brew install --build-from-source postgresql@12
