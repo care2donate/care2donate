@@ -23,7 +23,8 @@ class UserResource(resources.ModelResource):
 class UserAdmin(nested_admin.NestedModelAdmin, ImportExportModelAdmin):
     resource_class = UserResource
     inlines = [CovidUserDetailInline, ]
-    list_display = ('name', 'gender', 'dob', 'locality', 'contact_number', )
+    list_display = ('name', 'gender', 'dob', 'locality', 'contact_number',
+                    'created', )
     list_filter = ('gender', 'locality', )
     search_fields = ('id', 'name', 'contact_number')
 

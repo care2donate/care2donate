@@ -1,10 +1,14 @@
+from datetime import datetime
 from user.models import User
 from covid.constants import BloodGroup, CovidUserType
 from django.db import models
 
 
 class Referrer(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, unique=True)
+
+    created = models.DateTimeField(default=datetime.now())
+    modified = models.DateTimeField(auto_now=True)
 
     class Meta:
         app_label = 'covid'
@@ -29,6 +33,9 @@ class CovidUserDetail(models.Model):
     recovered_contacts = models.IntegerField(null=True, blank=True)
     remarks = models.TextField(null=True, blank=True)
     is_verified = models.BooleanField(default=False)
+
+    created = models.DateTimeField(default=datetime.now())
+    modified = models.DateTimeField(auto_now=True)
 
     class Meta:
         app_label = 'covid'

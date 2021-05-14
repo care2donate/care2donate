@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 from user.constants import GenderChoices
 from user.dj_city import CITIES
@@ -5,7 +6,11 @@ from user.utils import mobile_validator
 
 
 class Locality(models.Model):
-    city = models.CharField(choices=CITIES, null=False, max_length=20)
+    city = models.CharField(choices=CITIES, null=False,
+                            max_length=20, unique=True)
+
+    created = models.DateTimeField(default=datetime.now())
+    modified = models.DateTimeField(auto_now=True)
 
     class Meta:
         app_label = 'user'
@@ -26,6 +31,9 @@ class User(models.Model):
     contact_number = models.CharField(max_length=32, db_index=True,
                                       validators=[mobile_validator],
                                       unique=True)
+
+    created = models.DateTimeField(default=datetime.now())
+    modified = models.DateTimeField(auto_now=True)
 
     class Meta:
         app_label = 'user'
