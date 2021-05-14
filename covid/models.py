@@ -1,29 +1,16 @@
-from app.utils import mobile_validator
-from app.constants import BloodGroup, CovidUserType, GenderChoices
+from user.models import User
+from covid.constants import BloodGroup, CovidUserType
 from django.db import models
-from app.dj_city import CITIES
 
 
 class Referrer(models.Model):
     name = models.CharField(max_length=30)
 
+    class Meta:
+        app_label = 'covid'
 
-class Locality(models.Model):
-    city = models.CharField(choices=CITIES, null=False, max_length=20)
-
-
-class User(models.Model):
-    name = models.CharField(max_length=30)
-    gender = models.CharField(max_length=10, choices=GenderChoices.choices)
-    dob = models.DateField()
-    address = models.CharField(max_length=300, null=True, blank=True)
-    locality = models.ForeignKey(Locality, db_index=True,
-                                 related_name='app_locality',
-                                 on_delete=models.DO_NOTHING,
-                                 null=True, blank=True)
-    contact_number = models.CharField(max_length=32, db_index=True,
-                                      validators=[mobile_validator],
-                                      unique=True)
+    def __str__(self):
+        return f'{self.id}: {self.name}'
 
 
 class CovidUserDetail(models.Model):
@@ -42,3 +29,9 @@ class CovidUserDetail(models.Model):
     recovered_contacts = models.IntegerField(null=True, blank=True)
     remarks = models.TextField(null=True, blank=True)
     is_verified = models.BooleanField(default=False)
+
+    class Meta:
+        app_label = 'covid'
+
+    def __str__(self):
+        return f'{self.id}: {self.user.name}'

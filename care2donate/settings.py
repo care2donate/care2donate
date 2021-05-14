@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-PROJECT_APP = ['app', ]
+PROJECT_APP = ['user', 'covid']
 CORE = [
     'django.contrib.admin',
     'django.contrib.auth',
