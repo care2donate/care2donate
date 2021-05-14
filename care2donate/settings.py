@@ -29,7 +29,12 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-PROJECT_APP = ['user', 'covid']
+PROJECT_APP = [
+    'user',
+    'covid',
+
+]
+
 CORE = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +42,9 @@ CORE = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
+    'nested_admin',
+
 ]
 
 INSTALLED_APPS = PROJECT_APP + CORE

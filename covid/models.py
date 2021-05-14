@@ -14,7 +14,7 @@ class Referrer(models.Model):
 
 
 class CovidUserDetail(models.Model):
-    user = models.ForeignKey(
+    user = models.OneToOneField(
             User, db_index=True,
             related_name='app_user',
             on_delete=models.DO_NOTHING)
