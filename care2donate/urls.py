@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from care2donate.views import *
+
+admin.site.site_header = "Care2Donate Admin"
+admin.site.site_title = "Care2Donate Admin"
+admin.site.index_title = "Welcome to Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', redirect_to_admin)
 ]
