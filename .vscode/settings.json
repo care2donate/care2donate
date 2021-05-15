@@ -1,5 +1,0 @@
-{
-    "python.pythonPath": "/opt/anaconda3/envs/care2donate/bin/python",
-    "python.linting.pycodestyleEnabled": true,
-    "python.linting.enabled": true
-}
