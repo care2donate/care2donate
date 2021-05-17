@@ -1,0 +1,50 @@
+<!-- Modal Header -->
+<div class="modal-header">
+<h4 class="modal-title">Plasma Request Form</h4>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<!-- Modal body -->
+<div class="modal-body">
+    <div class="registration-form_body d-flex flex-wrap justify-content-between px-3">
+        <div class="registration-form-row row d-flex flex-column mb-2">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter Donor’s Name" name="name" id="donor-name" required>
+        </div>
+        <div class="registration-form-row row d-flex flex-column mb-2">
+            <label for="name">Contact No.</label>
+            <input type="number" placeholder="Enter Donor’s Mobile Number" name="donor-number"
+                id="number" required>
+        </div>
+        <div class="registration-form-row row d-flex flex-column mb-2">
+            <label for="email">Email ID</label>
+            <input type="text" placeholder="Enter Email ID" name="email" id="donor-email" required>
+        </div>
+        <div class="registration-form-row row d-flex flex-column mb-2">
+            <label for="email">BLOOD GROUP</label>
+            <select name="blood-groups">
+                <option value="">O+</option>
+                <option value="">AB+</option>
+                <option value="">O-</option>
+                <option value="">AB-</option>
+            </select>
+        </div>
+        <div class="registration-form-row row d-flex flex-column mb-2">
+            <label for="email">Date of Negative Report</label>
+            <input type="date" placeholder="Enter Date" name="date" id="donor-date" required>
+        </div>
+        <div class="registration-form-row row d-flex flex-column mb-2">
+            <label for="email">City</label>
+            <input type="text" placeholder="Select your City" name="city" id="donor-city" required>
+        </div>
+        <div class="registration-form-row row d-flex flex-column mb-2">
+            <label for="email">State</label>
+            <input type="text" placeholder="Select your State" name="state" id="donor-state" required>
+        </div>
+    </div>
+</div>
+
+<!-- Modal footer -->
+<div class="modal-footer border-0 pt-0 px-5 mb-2">
+    <button type="button" class="btn register-btn">Register</button>
+</div>

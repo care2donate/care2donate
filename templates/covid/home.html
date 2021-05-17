@@ -27,12 +27,32 @@
                                 <h6 class="donate-plasma-description">We match donors and patients on the basis
                                     of area and Blood group
                                 </h6>
+
+                                <!-- Button to Open the Modal -->
                                 <div class="button-div d-flex flex-lg-row flex-column pt-3">
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScUpUSpgi1iAKXJ9gm5BwGcnvs2LRIJ0kEJQIFl_SjJu_eYgQ/viewform" class="btn-1 py-3 px-4 mr-lg-3 mb-lg-0 mb-3">I am in urgent <br> need of
-                                        plasma</a>
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0tIvW12UaWI53x37YQNSGwDClDRKmPNBlIb3b1wVC5angYw/viewform" class="btn-2 py-3 px-4"
-                                        >I want
-                                        to <br> donate plasma</a>
+                                    <button type="button" data-toggle="modal" data-target="#donor_modal" class="btn-primary2"
+                                        >I want to <br> donate plasma</button>
+
+                                    <button type="button" data-toggle="modal" data-target="#recipient_modal" class="btn-warning2"
+                                        >I am in urgent <br> need of plasma
+                                    </button>
+                                </div>
+
+                                <!-- The Modal -->
+                                <div class="modal" id="donor_modal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            {% include 'covid/donor.html' with posts=postdata %}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal" id="recipient_modal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            {% include 'covid/recipient.html' with posts=postdata %}
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
