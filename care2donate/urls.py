@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from care2donate.views import *
 
 admin.site.site_header = "Care2Donate Admin"
@@ -23,5 +23,6 @@ admin.site.index_title = "Welcome to Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', redirect_to_admin)
+    # path('', redirect_to_admin),
+    path('', include('covid.urls')),
 ]

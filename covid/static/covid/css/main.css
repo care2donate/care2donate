@@ -1,0 +1,795 @@
+/* ----------------------------------
+
+Name: main.css
+Version: 1.0
+
+-------------------------------------
+
+Table of contents
+   
+    01. Navbar
+    02. Slider
+    03. Features
+    04. Contact Us
+    05. Footer
+    06. Page Loading
+    07. Media Query
+*/
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #f9faff;
+}
+
+/*--------------------------------------------------
+[1. Start Navbar]
+--------------------------------------------------*/
+.navbar {
+    padding: 5px 0;
+   /* background-image: linear-gradient(127deg, #9b9aa0 0%, #2108b1 91%);*/
+    background-color: wheat;
+}
+
+.navbar .nav-item {
+    padding: 0;
+    margin: 0;
+}
+.navbar .nav-item .nav-link {
+    padding: 0;
+    margin: 0 0 0 45px;
+    font-size: 15px;
+    color: #2108b1;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+}
+.navbar .nav-item .nav-link:hover {
+    color: #2a1a7e
+}
+.navbar .btn-1 {
+    background: #ffffff;
+    border: 1px solid #3b566e;
+    text-decoration: none;
+    color: #2108b1;
+    border-radius: 10px;
+    padding: 10px 45px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 45px;
+    transition: all 0.2s ease-in;
+    display: inline-block;
+}
+.navbar .btn-1:hover {
+    background: #2108b1;
+    box-shadow: 1px 1px 30px 0 rgba(0,0,0,0);
+    color: wheat;
+}
+
+/*--------------------------------------------------
+[2. Start Slider]
+--------------------------------------------------*/
+.slider {
+    background: url('https://care2donate.com/img/banner.png') center center no-repeat; 
+    background-size: cover;
+    height: 100vh;
+   /* background-image: linear-gradient(127deg, #2108b1 0%, #2a1a7e 91%); */
+}
+.slider .content {
+    margin-top: 100px;
+    align-items: center;
+}
+.slider .content .title h1 {
+    font-size: 45px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 55px;
+    margin: 0;
+    padding: 0;
+}
+.slider .content  p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 26px;
+    padding: 0;
+    margin: 10px 0 30px;
+}
+.slider .content .btn-1 {
+
+    box-shadow: 1px 1px 30px 0 rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: #253987;
+}
+
+.slider .content .btn-2 {
+    background: #e99f3d;
+    box-shadow: 1px 1px 30px 0 rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.slider .content .btn-3 {
+    background: #ffffff;
+    box-shadow: 1px 1px 30px 0 rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: #3b566e;
+    border-radius: 15px;
+    padding: 10px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/*MODAL*/
+
+/* Large devices (desktops, less than 1200px) */
+.modal{
+    backdrop-filter: blur(10px);
+}
+.modal-content{
+    border-radius: 16px !important;
+}
+.donar-form-title{
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+.register-btn{
+    flex-grow: 0;
+    margin: 0px;
+    border-radius: 8px !important;
+    border: solid 1px #253987 !important;
+    background-color: #253987 !important;
+    width: 100%;
+    color: #fff !important;
+    height: 55px !important;
+}
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 800px !important;
+}
+.registration-form_body .row{
+  width: 50%;
+}
+.registration-form_body .row input, .registration-form_body .row select{
+  width: 100%;
+  height: 50px;
+  flex-grow: 0;
+  padding: 15px 16px 16px 24px;
+  border-radius: 8px;
+  border: solid 1px #c9c9c9;
+  background-color: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+}
+.registration-form_body .row label{
+    height: 19px;
+    flex-grow: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+}
+
+@media (max-width: 991px) and (orientation: portrait){
+ .registration-form_body .row{
+      width: 100%;
+    }
+    .registration-form_body .row input, .registration-form_body .row select{
+        width: 100%;
+        height: 40px;
+        flex-grow: 0;
+        padding: 15px 16px 16px 24px;
+        border-radius: 8px;
+        border: solid 1px #c9c9c9;
+        background-color: #ffffff;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-family: 'Inter', sans-serif;
+      }
+    .registration-form_body .row label{
+        height: 15px;
+        flex-grow: 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+    }     
+}
+
+.slider .title {
+    font-weight: 700;
+    color: black;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.slider .subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.slider .content .title-box
+{
+    width: auto;
+    background-color: white;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.list-title {
+    width: auto;
+    margin: 0 15px 20px 0;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: 0.24px;
+    text-align: left;
+    color: #253987;
+  }
+
+.criteria {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    margin: 0 0 0 20px;
+    padding: 40px 58px 40px 40px;
+    border-radius: 10px;
+    background-color: #f4f7ff;
+    padding-right: 10px;
+    margin-right: 0px;
+}
+
+/*--------------------------------------------------
+[3. Start Features]
+--------------------------------------------------*/
+.features {
+    background-size: cover;
+    padding: 120px 0;
+}
+.features .heading, h6, h5 {
+    font-size: 30px;
+    color: #3b566e;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding: 0;
+}
+.features .line {
+    background-image: linear-gradient(127deg, #FA5B86 0%, #FB9A86 91%);
+    height: 2px;
+    width: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.directory {
+    width: auto;
+    height: auto;
+    flex-grow: 0;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: rgba(37, 57, 135, 0.7);
+}
+
+
+.directory a:hover {
+    border-bottom:1px solid;
+}
+
+.directory ul .active {
+    border-bottom:1px solid;
+}
+
+/*--------------------------------------------------
+[4. Start Contact Us]
+--------------------------------------------------*/
+.contact {
+    padding: 120px 0;
+    background-color: #253987;
+}
+
+.contact .heading h2 {
+    font-size: 30px;
+    color: #3b566e;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+
+.contact .form-control {
+    padding: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    background: #f1f1f5;
+    border: 0;
+    border-radius: 10px;
+}
+
+.contact button.btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #e99f3d;
+}
+
+.contact .contact-form.name-btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #e99f3d;
+}
+
+/*.contact .contact-form.email-btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #e99f3d;
+}
+
+.contact .contact-form.mobile-btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #e99f3d;
+}*/
+
+.contact .title h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact .title p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.6;
+    margin: 0 0 40px;
+}
+
+.contact .content p {
+    width: 210px;
+    height: 40px;
+    flex-grow: 0;
+    margin: 0 384px 12px 0;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: 0.24px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.contact .content h4 {
+    width: 294px;
+    height: 70px;
+    flex-grow: 0;
+    margin: 12px 300px 28px 0;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.contact .content h6 {
+    width: 594px;
+    height: 58px;
+    flex-grow: 0;
+    margin: 28px 0 0;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.45;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.contact .content .info {
+    margin-top: 30px;
+}
+
+.contact .content .info i {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    color: #02434b;
+    margin-right: 20px;
+}
+
+
+
+/*--------------------------------------------------
+[5. Start Footer]
+--------------------------------------------------*/
+.footer {
+    padding: 60px 0;
+    background-color: #06184c;;
+}
+.footer p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 20px 0 0;
+}
+
+/*--------------------------------------------------
+[5. Start Donor Registration]
+--------------------------------------------------*/
+
+  /* Add padding to containers */
+  .container .donor-register {
+    width: 721px;
+    height: 392px;
+    flex-grow: 0;
+    margin: 42px 8px 48px 0;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+
+.donor-registration {
+    width: 721px;
+    height: 392px;
+    flex-grow: 0;
+    margin: 42px 8px 48px 0;
+}
+
+
+/*--------------------------------------------------
+[6. Start Page Loading]
+--------------------------------------------------*/
+.no-js #loader {
+    display: none;
+}
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+.se-pre-con {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("https://care2donate.com/img/loader/Preloader_2.gif") center no-repeat #fff;
+}
+
+/*--------------------------------------------------
+[7. Start Media Query]
+--------------------------------------------------*/
+@media (max-width: 383.98px) {
+    .slider .content .left .btn-1 {
+        margin-bottom: 20px;
+    }
+    .slider .content .left .btn-2 {
+        margin-left: 0;
+    }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar .nav-item .nav-link {
+        margin: 20px 0 10px;
+    }
+    .navbar .btn-1 {
+        margin: 20px 0;
+        display: inline-block;
+    }
+
+    /* Slider */
+    .slider {
+        height: auto;
+        padding: 120px 0;
+    }
+    .slider .content {
+        text-align: center;
+    }
+    .slider .content .left {
+        margin-bottom: 40px;
+    }
+
+    /* Features */
+    .features {
+        padding: 120px 0 90px;
+    }
+    .features .box {
+        margin-bottom: 30px;
+    }
+
+    /* Some Facts */
+    .some-facts {
+        padding: 80px 0 30px;
+    }
+    .some-facts .items {
+        margin-bottom: 50px;
+    }
+
+    /* Some Project */
+    .project .right {
+        margin-top: 40px;
+    }
+
+    /* Some Benefits */
+    .benefits {
+        padding: 120px 0 80px;
+    }
+    .benefits .box {
+        margin-bottom: 40px;
+    }
+
+    /* Our Team */
+    .our-team {
+        padding: 120px 0 90px;
+    }
+    .our-team .box {
+        margin-bottom: 30px;
+    }
+
+    /* Some Project-2 */
+    .project-2 .left {
+        margin-bottom: 40px;
+    }
+
+    /* Some Our Price */
+    .our-price {
+        padding: 120px 0 90px;
+    }
+    .our-price .box {
+        margin-bottom: 30px;
+    }
+
+    /* Some Contact Us */
+    .contact .content {
+        margin-bottom: 40px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* Navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar .nav-item .nav-link {
+        margin: 20px 0 10px;
+    }
+    .navbar .btn-1 {
+        margin: 20px 0;
+        display: inline-block;
+    }
+
+    /* Slider */
+    .slider {
+        height: auto;
+        padding: 120px 0;
+    }
+    .slider .content {
+        text-align: center;
+    }
+    .slider .content .left {
+        margin-bottom: 40px;
+    }
+
+    /* Features */
+    .features {
+        padding: 120px 0 90px;
+    }
+    .features .box {
+        margin-bottom: 30px;
+    }
+
+    /* Some Facts */
+    .some-facts {
+        padding: 80px 0 30px;
+    }
+    .some-facts .items {
+        margin-bottom: 50px;
+    }
+
+    /* Some Project */
+    .project .right {
+        margin-top: 40px;
+    }
+
+    /* Some Benefits */
+    .benefits {
+        padding: 120px 0 80px;
+    }
+    .benefits .box {
+        margin-bottom: 40px;
+    }
+
+    /* Our Team */
+    .our-team {
+        padding: 120px 0 90px;
+    }
+    .our-team .box {
+        margin-bottom: 30px;
+    }
+    /* Team */
+    .our-team .box .image .social-icon {
+        width: 40%;
+    }
+
+    /* Some Project-2 */
+    .project-2 .left {
+        margin-bottom: 40px;
+    }
+
+    /* Some Our Price */
+    .our-price {
+        padding: 120px 0 90px;
+    }
+    .our-price .box {
+        margin-bottom: 30px;
+    }
+
+    /* Some Contact Us */
+    .contact .content {
+        margin-bottom: 40px;
+    }
+
+}
+
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    /* Navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar .nav-item .nav-link {
+        margin: 20px 0 10px;
+    }
+    .navbar .btn-1 {
+        margin: 20px 0;
+        display: inline-block;
+    }
+    /* Slider */
+    .slider {
+        height: auto;
+        padding: 120px 0;
+    }
+    .slider .content .left h1 {
+        font-size: 35px;
+    }
+    .slider .content .left p {
+        font-size: 15px;
+    }
+
+    /* Some Facts */
+    .some-facts {
+        padding: 80px 0 30px;
+    }
+    .some-facts .items {
+        margin-bottom: 50px;
+    }
+
+    /* Team */
+    .our-team .box .image .social-icon {
+        width: 70%;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}

@@ -7,7 +7,7 @@ venv
 care2donate/config/config.py
 # C extensions
 *.so
-static/
+/static
 # Distribution / packaging
 .Python
 build/

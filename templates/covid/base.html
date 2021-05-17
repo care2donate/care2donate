@@ -1,0 +1,504 @@
+{% load static %}
+{% load rest_framework %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="static/covid/css/plugins/animate.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="static/covid/css/plugins/slick.css">
+    <link rel="stylesheet" href="static/covid/css/plugins/slick-theme.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="static/covid/css/plugins/magnific-popup.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="static/covid/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&amp;family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <title>Care 2 Donate</title>
+    <style>
+        .first-section {
+            background-color: #253987;
+        }
+
+        .first-section-title {
+            flex-grow: 0;
+            font-family: AllagiaDemo-Regular;
+            font-size: 52px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: 0.52px;
+            text-align: center;
+            color: #ffffff;
+            background: url('static/covid/img/Care2Donate%20Sprite%20Sheet.svg') no-repeat -40px -172px;
+            width: 379px;
+            height: 104px;
+        }
+
+        .first-section-subtitle {
+            flex-grow: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: 0.32px;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .first-section-title-description {
+            flex-grow: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #ffffff;
+            width: 50%;
+        }
+
+        .first-section-content {
+            padding-top: 100px;
+            padding-bottom: 40px;
+        }
+
+        .first-section-content .content {
+            padding: 58px 62px 57px 60px;
+            border-radius: 32px;
+            box-shadow: 20px 14px 64px 0 rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;
+        }
+
+        .donate-plasma-title {
+            font-family: Inter;
+            font-size: 52px;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.35;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+
+        }
+
+        .donate-plasma-subtitle {
+            flex-grow: 0;
+            font-family: Inter;
+            font-size: 32px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.25;
+            letter-spacing: 0.2px;
+            text-align: left;
+            color: #000000;
+        }
+
+        .donate-plasma-description {
+            font-family: Inter;
+            font-size: 22px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.32;
+            letter-spacing: 0.22px;
+            text-align: left;
+            color: #444444;
+        }
+
+        .left-box {
+            border-right: 1px solid rgba(37, 57, 135, 0.2);
+        }
+
+        .btn-1 {
+            border-radius: 10px;
+            background-color: #253987;
+            color: #fff;
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.29;
+            letter-spacing: 0.24px;
+            text-align: left;
+        }
+
+        .btn-1:hover,
+        .btn-2:hover {
+            text-decoration-line: none;
+            color: #fff;
+        }
+
+        .btn-2 {
+            border-radius: 10px;
+            background-color: #e99f3d;
+            color: #fff;
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.29;
+            letter-spacing: 0.24px;
+            text-align: left;
+        }
+
+        .right-box {
+            margin-left: 20px;
+            margin-right: 0px;
+            border-radius: 10px;
+            background-color: #f4f7ff;
+        }
+
+        .union {
+            width: 16px;
+            height: 15px;
+            flex-grow: 0;
+            margin: 31.2px 7.3px 0 2px;
+            background-color: #ffffff;
+        }
+
+        .directory-title {
+            font-family: Inter;
+            font-size: 32px;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.32px;
+            text-align: center;
+            color: #253987;
+        }
+
+        .directory-description {
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #000000;
+            width: 50%;
+        }
+
+        .testing-center-data-row {
+            border-radius: 10px;
+            border: solid 1px #b5bbd7;
+            background-color: #e9ebf3;
+        }
+
+        .center-name {
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: 0.2px;
+            color: #000000;
+        }
+
+        .district-name,
+        .contact-number {
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: 0.2px;
+            color: #253987;
+        }
+
+        .twitter{
+            background: url('static/covid/img/Care2Donate%20Sprite%20Sheet.svg') no-repeat -167px -42px;
+            width: 21px;
+            height: 20px;
+        }
+        .facebook{
+            background: url('static/covid/img/Care2Donate%20Sprite%20Sheet.svg') no-repeat -393px -41px;
+            width: 11px;
+            height: 21px;
+        }
+        .instagram{
+            background: url('static/covid/img/Care2Donate%20Sprite%20Sheet.svg') no-repeat -240px -40px;
+            width: 22px;
+            height: 22px;
+        }
+        .google{
+            background: url('static/covid/img/Care2Donate%20Sprite%20Sheet.svg') no-repeat -315px -42px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-copyright-message{
+            color: #3d509c;
+        }
+        .footer-branding{
+            color: #fff;
+            font-weight: 600;
+        }
+        .heart{
+            background: url('static/covid/img/Care2Donate%20Sprite%20Sheet.svg') no-repeat -455px -39px;
+            width: 30px;
+            height: 27px;
+            display: inline-block;
+            transform: scale(.8);
+            margin-bottom: -7px;
+        }
+
+        @media (max-width: 767.98px) {
+            .first-section-title {
+                background: url('static/covid/img/Care2Donate%20Sprite%20Sheet.svg') no-repeat -40px -172px;
+                width: 379px;
+                height: 104px;
+                transform: scale(.8);
+                margin-left: -13px !important;
+            }
+
+            .first-section-subtitle {
+                font-size: 24px;
+                margin-bottom: 10px !important;
+            }
+
+            .first-section-title-description {
+                width: 90%;
+                margin: 0px;
+            }
+
+            .first-section-content {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .first-section-content .content {
+                padding: 28px 20px;
+                border-radius: 20px;
+                box-shadow: 20px 14px 64px 0 rgba(0, 0, 0, 0.15);
+            }
+
+            .donate-plasma-title {
+                font-family: Inter;
+                font-size: 28px;
+                font-weight: 800;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.07;
+                letter-spacing: normal;
+                text-align: left;
+                color: #000000;
+            }
+
+            .donate-plasma-subtitle {
+                flex-grow: 0;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1;
+                letter-spacing: 0.2px;
+                text-align: left;
+                color: #000000;
+            }
+
+            .donate-plasma-description {
+                flex-grow: 0;
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.67;
+                letter-spacing: 0.12px;
+                text-align: left;
+                color: #171717;
+            }
+
+            .left-box {
+                border-right: none;
+            }
+
+            .btn-1 {
+                border-radius: 10px;
+                width: 100%;
+                font-family: Inter;
+                font-size: 18px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.44;
+                letter-spacing: 0.18px;
+            }
+
+            .btn-2 {
+                border-radius: 10px;
+                width: 100%;
+                font-family: Inter;
+                font-size: 18px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.44;
+                letter-spacing: 0.18px;
+            }
+
+            .directory-title {
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 800;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 0.2px;
+                text-align: center;
+                color: #253987;
+            }
+
+            .directory-description {
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.12px;
+                text-align: center;
+                color: #000000;
+                width: 100%;
+            }
+
+            .center-name {
+                font-family: Inter;
+                font-size: 14px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.2px;
+                color: #000000;
+            }
+
+            .district-name,
+            .contact-number {
+                font-family: Inter;
+                font-size: 13px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.2px;
+                color: #253987;
+            }
+
+            .center-address {
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.2px;
+                color: #000000;
+            }
+
+            .contact-number-placeholder {
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: 0.2px;
+                color: #000000;
+            }
+        }
+    </style>
+<head>
+
+</head>
+<body>
+    <!-- Page Loading -->
+    <div class="se-pre-con"></div>
+    <!-- ======== Start Navbar ======== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-0" href="#slider"><img src="static/covid/img/Logo%20Care2Donate.svg" alt="Logo"></a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc0tIvW12UaWI53x37YQNSGwDClDRKmPNBlIb3b1wVC5angYw/viewform">Donate
+                            plasma</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ======== End Navbar ======== -->
+
+    {% block main_body %}
+    {% endblock %}
+
+
+    <!-- ======== Start Footer ======== -->
+
+    <footer class="footer">
+        <div class="container text-center d-flex flex-lg-row flex-column justify-content-between flex-lg-wrap flex-nowrap">
+            <div class="footer-copyright-message"> created with <span class="heart"></span> by <span class="footer-branding">care2donate</span> volunteers </div>
+            <div class="footer-social-media-link d-flex flex-lg-wrap flex-nowrap justify-content-center pt-lg-0 pt-4">
+                <a class="twitter mx-lg-0 mr-lg-3 mx-3" href="https://twitter.com/CareDonate" target="_blank"> </a>
+                <a class="facebook mx-lg-0 mr-lg-3  mx-3" href="https://www.facebook.com/Care2Donate-104342171808518" target="_blank"> </a>
+                <a class="instagram mx-lg-0 mr-lg-3  mx-3" href="https://www.instagram.com/care2donate/" target="_blank"> </a>
+            </div>
+        </div>
+    </footer>
+    <!-- ======== End Footer ======== -->
+
+    <!-- ======== Java Script ======== -->
+    <script src="static/covid/js/plugins/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap 4.1.3 -->
+    <script src="static/covid/js/plugins/popper.min.js"></script>
+    <script src="static/covid/js/bootstrap.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="static/covid/js/plugins/slick.min.js"></script>
+    <!-- Couner Up-->
+    <script src="static/covid/js/plugins/jquery.waypoints.min.js"></script>
+    <script src="static/covid/js/plugins/jquery.counterup.min.js"></script>
+    <!-- Wow JS -->
+    <script src="static/covid/js/plugins/wow.min.js"></script>
+    <!-- Magnific Popup-->
+    <script src="static/covid/js/plugins/magnific-popup.min.js"></script>
+    <!-- Main Js-->
+    <script src="static/covid/js/main.js"></script>
+</body>
+</html>
