@@ -1,5 +1,6 @@
 {% load static %}
 {% load rest_framework %}
+{% load widget_tweaks %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -454,14 +455,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-0" href="#slider"><img src="static/covid/img/Logo%20Care2Donate.svg" alt="Logo"></a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            {% comment %} <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc0tIvW12UaWI53x37YQNSGwDClDRKmPNBlIb3b1wVC5angYw/viewform">Donate
                             plasma</a>
                     </li>
                 </ul>
-            </div>
+            </div> {% endcomment %}
         </div>
     </nav>
     <!-- ======== End Navbar ======== -->

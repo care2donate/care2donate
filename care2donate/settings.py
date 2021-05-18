@@ -47,6 +47,7 @@ CORE = [
     'nested_admin',
     'rest_framework',
     'rest_framework_jwt',
+    'widget_tweaks',
 
 ]
 
