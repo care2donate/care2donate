@@ -2,7 +2,7 @@ from user.dj_city import CITIES
 from user.models import City, State
 
 
-def create_location_date():
+def create_location_data():
     '''Method to generate location data for DB first time'''
 
     state_count = State.objects.all().count()
