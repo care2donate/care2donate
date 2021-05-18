@@ -7,8 +7,8 @@ from django.db import models
 class Referrer(models.Model):
     name = models.CharField(max_length=30, unique=True)
 
-    created = models.DateTimeField(default=datetime.now())
-    modified = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         app_label = 'covid'
@@ -34,8 +34,8 @@ class CovidUserDetail(models.Model):
     remarks = models.TextField(null=True, blank=True)
     is_verified = models.BooleanField(default=False)
 
-    created = models.DateTimeField(default=datetime.now())
-    modified = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         app_label = 'covid'

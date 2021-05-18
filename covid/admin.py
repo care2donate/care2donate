@@ -18,7 +18,7 @@ class CovidUserDetailAdmin(nested_admin.NestedModelAdmin,
     resource_class = CovidUserDetailResource
     list_display = ('user', 'user_type', 'blood_group',
                     'covid_positive_date', 'covid_negate_date',
-                    'is_verified', 'created', )
+                    'is_verified', 'created_at', )
     list_filter = ('user_type', 'blood_group', 'is_verified', )
     search_fields = ('id', 'user__id', )
 

@@ -1,3 +1,4 @@
+from covid.forms import CovidUserDetailForm, CovidUserForm
 from rest_framework import status
 # from rest_framework.authentication import BasicAuthentication
 # from rest_framework_jwt.authentication import JSONWebTokenAuthentication
@@ -22,4 +23,10 @@ class CovidHomeAPIView(BaseAPIView):
     # permission_classes = [IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
-        return Response({}, status=status.HTTP_200_OK)
+        covid_user_form = CovidUserForm(initial={})
+        covid_user__details_form = CovidUserDetailForm(initial={})
+
+        return Response({
+            'covid_user_form': covid_user_form,
+            'covid_user_details_form': covid_user__details_form,
+        }, status=status.HTTP_200_OK)

@@ -1,5 +1,8 @@
 CITIES = (
-    ("Andaman and Nicobar Islands", (("Port Blair", "Port Blair"),)),
+    (
+        "Andaman and Nicobar Islands",
+        (
+            ("Port Blair", "Port Blair"),)),
     (
         "Andhra Pradesh",
         (
@@ -69,7 +72,10 @@ CITIES = (
             ("Lakhisarai", "Lakhisarai"),
         ),
     ),
-    ("Chandigarh", (("Chandigarh", "Chandigarh"),),),
+    (
+        "Chandigarh",
+        (
+            ("Chandigarh", "Chandigarh"),),),
     (
         "Chhattisgarh",
         (
@@ -88,9 +94,18 @@ CITIES = (
             ("Mahasamund", "Mahasamund"),
         ),
     ),
-    ("Daman and Diu", (("Daman", "Daman"),),),
-    ("Delhi", (("Delhi", "Delhi"),),),
-    ("Dadra and Nagar Haveli", (("Silvassa", "Silvassa"),),),
+    (
+        "Daman and Diu",
+        (
+            ("Daman", "Daman"),),),
+    (
+        "Delhi",
+        (
+            ("Delhi", "Delhi"),),),
+    (
+        "Dadra and Nagar Haveli",
+        (
+            ("Silvassa", "Silvassa"),),),
     (
         "Goa",
         (
@@ -140,7 +155,10 @@ CITIES = (
             ("Mehsana", "Mehsana"),
         ),
     ),
-    ("Himachal Pradesh", (("Shimla", "Shimla"),),),
+    (
+        "Himachal Pradesh",
+        (
+            ("Shimla", "Shimla"),),),
     (
         "Haryana",
         (
@@ -241,7 +259,10 @@ CITIES = (
             ("Ponnani", "Ponnani"),
         ),
     ),
-    ("Lakshadweep", (("Kavaratti", "Kavaratti"),),),
+    (
+        "Lakshadweep",
+        (
+            ("Kavaratti", "Kavaratti"),),),
     (
         "Maharashtra",
         (
@@ -289,8 +310,14 @@ CITIES = (
             ("Parli", "Parli"),
         ),
     ),
-    ("Meghalaya", (("Shillong", "Shillong"),),),
-    ("Manipur", (("Imphal", "Imphal"),),),
+    (
+        "Meghalaya",
+        (
+            ("Shillong", "Shillong"),),),
+    (
+        "Manipur",
+        (
+            ("Imphal", "Imphal"),),),
     (
         "Madhya Pradesh",
         (
@@ -332,8 +359,14 @@ CITIES = (
             ("Balaghat", "Balaghat"),
         ),
     ),
-    ("Mizoram", (("Aizawl", "Aizawl"),),),
-    ("Nagaland", (("Dimapur", "Dimapur"), ("Kohima", "Kohima"),),),
+    (
+        "Mizoram",
+        (
+            ("Aizawl", "Aizawl"),),),
+    (
+        "Nagaland",
+        (
+            ("Dimapur", "Dimapur"), ("Kohima", "Kohima"),),),
     (
         "Odisha",
         (
@@ -424,7 +457,10 @@ CITIES = (
             ("Karauli", "Karauli"),
         ),
     ),
-    ("Sikkim", (("Gangtok", "Gangtok"),),),
+    (
+        "Sikkim",
+        (
+            ("Gangtok", "Gangtok"),),),
     (
         "Telangana",
         (
@@ -485,7 +521,10 @@ CITIES = (
             ("Ooty", "Ooty"),
         ),
     ),
-    ("Tripura", (("Agartala", "Agartala"),),),
+    (
+        "Tripura",
+        (
+            ("Agartala", "Agartala"),),),
     (
         "Uttar Pradesh",
         (
