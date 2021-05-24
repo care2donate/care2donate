@@ -4,19 +4,10 @@ from django.forms import ModelForm, DateField, SelectDateWidget
 
 from covid.models import CovidUserDetail
 from user.models import User
+from bootstrap_datepicker_plus import DatePickerInput
 
 
 class CovidUserForm(ModelForm):
-    YEARS = [x for x in range(2019, 2023)]
-
-    dob = DateField(
-        widget=SelectDateWidget(
-            years=YEARS,
-            empty_label=("Choose Year", "Choose Month", "Choose Day"),
-        ),
-        initial=datetime.now()
-    )
-
     class Meta:
         model = User
         fields = (
@@ -25,22 +16,25 @@ class CovidUserForm(ModelForm):
             'address', 'city',
             'contact_number'
         )
+        widgets = {
+            'dob': DatePickerInput(
+                format='DD/MM/YYYY',
+            ),
+        }
 
 
 class CovidUserDetailForm(ModelForm):
     YEARS = [x for x in range(2019, 2023)]
 
     covid_positive_date = DateField(
-        widget=SelectDateWidget(
+        widget=DatePickerInput(
             years=YEARS,
-            empty_label=("Choose Year", "Choose Month", "Choose Day"),
-        ),
+            format='DD/MM/YYYY',),
         initial=datetime.now()
     )
     covid_negate_date = DateField(
-        widget=SelectDateWidget(
-            years=YEARS,
-            empty_label=("Choose Year", "Choose Month", "Choose Day"),
+        widget=DatePickerInput(
+            format='DD/MM/YYYY',
         ),
         initial=datetime.now()
     )

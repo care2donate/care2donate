@@ -48,6 +48,8 @@ CORE = [
     'rest_framework',
     'rest_framework_jwt',
     'widget_tweaks',
+    'bootstrap_datepicker_plus',
+    'bootstrap4',
 
 ]
 
@@ -135,6 +137,11 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+BOOTSTRAP4 = {
+    'include_jquery': True,
+}
+
 
 try:
     from care2donate.config.config import *

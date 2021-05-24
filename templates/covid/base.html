@@ -2,6 +2,10 @@
 {% load rest_framework %}
 {% load widget_tweaks %}
 
+{% load bootstrap4 %}       {# import bootstrap4/bootstrap3 #}
+{% bootstrap_css %}         {# Embed Bootstrap CSS #}
+{% bootstrap_javascript jquery='full' %}  {# Embed Bootstrap JS+jQuery #}
+
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
@@ -20,17 +24,17 @@
     <link rel="stylesheet" href="static/covid/css/plugins/magnific-popup.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="static/covid/css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> {% endcomment %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&amp;family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&amp;display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> {% endcomment %}
+    {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> {% endcomment %}
 
     <title>Care 2 Donate</title>
     <style>
@@ -486,10 +490,11 @@
     <!-- ======== End Footer ======== -->
 
     <!-- ======== Java Script ======== -->
-    <script src="static/covid/js/plugins/jquery-3.3.1.min.js"></script>
+    {% comment %} <script src="static/covid/js/plugins/jquery-3.3.1.min.js"></script> {% endcomment %}
+
     <!-- Bootstrap 4.1.3 -->
     <script src="static/covid/js/plugins/popper.min.js"></script>
-    <script src="static/covid/js/bootstrap.min.js"></script>
+    {% comment %} <script src="static/covid/js/bootstrap.min.js"></script> {% endcomment %}
     <!-- Slick Slider -->
     <script src="static/covid/js/plugins/slick.min.js"></script>
     <!-- Couner Up-->
