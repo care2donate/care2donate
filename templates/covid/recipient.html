@@ -2,8 +2,8 @@
 
 <!-- Modal Header -->
 <div class="modal-header">
-<h4 class="modal-title">Plasma Request Form</h4>
-<button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Plasma Request Form</h4>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
 </div>
 
 <!-- Modal body -->
@@ -13,10 +13,37 @@
             {% csrf_token %}
             {% include 'covid/includes/bs4_form.html' with form=covid_user_form %}
             {% include 'covid/includes/bs4_form.html' with form=covid_user_details_form %}
+
+            {{ locality_form}}
         </div>
 
         <div class="modal-footer border-0 pt-0 px-5 mb-2">
-          <button type="button" class="btn register-btn">Register</button>
+            <button type="button" class="btn register-btn">Register</button>
         </div>
     </form>
+
+    <script>
+        $(document).ready(function () {
+            $('select[name="state"]').on('change', function () {
+                var locality_data = {{locality_data | safe}};
+                //console.log("locality_data =", locality_data);
+
+                var cityOptions = "";
+                console.log("locality_data[this.value] =", locality_data[this.value]);
+
+                for (index in locality_data[this.value]["ids"]) {
+                    /*console.log(
+                        `${locality_data[this.value]["ids"][index]}: ${locality_data[this.value]["names"][index]}`
+                    );*/
+                    cityOptions += "<option>" + locality_data[this.value]["names"][index] + "</option>";
+                }
+
+                //console.log("cityOptions = ", cityOptions);
+                document.getElementsByName('city').forEach(function(ele, idx) {
+                    ele.innerHTML = cityOptions;
+                })
+            });
+
+        });
+    </script>
 </div>

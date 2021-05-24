@@ -50,6 +50,7 @@ CORE = [
     'widget_tweaks',
     'bootstrap_datepicker_plus',
     'bootstrap4',
+    'django_extensions',
 
 ]
 
